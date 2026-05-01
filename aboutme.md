@@ -1,9 +1,0 @@
-- 👋 Hi, I’m @amansamani
-- 👀 I’m interested in app development
-- 🌱 I’m currently learning DSA by c++
-- 💞️ I’m looking to collaborate on development
-- 📫 How to reach me -
-- insta - @amansamanii
-- my mail - amanworkinfo@gmail.com
-- 😄 Pronouns: him
-- ⚡ Fun fact: i'm currently more than a video editor than coder.
