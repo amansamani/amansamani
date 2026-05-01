@@ -119,7 +119,7 @@ const aman = {
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aman-samani)
 [![GitHub](https://img.shields.io/badge/GitHub-%23181717.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amansamani)
 [![Gmail](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:amanworkinfo@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-ADFF2F?style=for-the-badge&logo=vercel&logoColor=black)](https://gallery-toons.vercel.app/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-ADFF2F?style=for-the-badge&logo=vercel&logoColor=black)](https://amansamani.me/)
 
 <br/>
 
