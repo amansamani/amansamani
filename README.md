@@ -8,17 +8,10 @@
 
 <div align="center">
 
-
-
 [![Email](https://img.shields.io/badge/Email-000000?style=flat-square&logo=gmail&logoColor=ADFF2F)](mailto:amanworkinfo@gmail.com)
-
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-000000?style=flat-square&logo=linkedin&logoColor=ADFF2F)](https://www.linkedin.com/in/aman-samani)
-
 [![GitHub](https://img.shields.io/badge/GitHub-000000?style=flat-square&logo=github&logoColor=ADFF2F)](https://github.com/amansamani)
-
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat-square&logo=vercel&logoColor=ADFF2F)](https://amansamani.me)
-
-
 
 </div>
 
