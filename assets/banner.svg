@@ -1,29 +1,118 @@
-<svg width="900" height="220" viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg">
+<svg width="1000" height="260" viewBox="0 0 1000 260" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0a0a0a"/>
-      <stop offset="100%" stop-color="#000000"/>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050505" />
+      <stop offset="50%" stop-color="#0a0a0a" />
+      <stop offset="100%" stop-color="#000000" />
     </linearGradient>
+
+    <!-- Neon Glow Effect -->
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- 3D Glassmorphism Shadow -->
+    <filter id="glassShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="15" stdDeviation="15" flood-color="#ADFF2F" flood-opacity="0.15"/>
+    </filter>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&amp;display=swap');
+      .title { font-family: 'Fira Code', monospace; font-size: 46px; font-weight: 700; fill: #ADFF2F; filter: url(#neonGlow); letter-spacing: 1px; }
+      .subtitle { font-family: 'Fira Code', monospace; font-size: 18px; fill: #e5e5e5; }
+      .status { font-family: 'Fira Code', monospace; font-size: 14px; fill: #9ca3af; }
+      .status-active { fill: #ADFF2F; font-weight: bold; filter: url(#neonGlow); }
+      .prompt { font-family: 'Fira Code', monospace; font-size: 24px; fill: #ADFF2F; font-weight: bold; }
+      
+      /* Blinking Cursor Animation */
+      .cursor { animation: blink 1s step-end infinite; }
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+
+      /* Floating 3D Hologram Animations */
+      .floating { animation: float 6s ease-in-out infinite; }
+      .floating-reverse { animation: float-reverse 7s ease-in-out infinite; }
+      
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+      }
+      @keyframes float-reverse {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(8px); }
+        100% { transform: translateY(0px); }
+      }
+
+      .hologram { fill: rgba(173, 255, 47, 0.05); stroke: #ADFF2F; stroke-width: 1.5; filter: url(#neonGlow); }
+      .grid-line { stroke: #ADFF2F; stroke-width: 0.5; opacity: 0.15; }
+    </style>
   </defs>
 
-  <rect x="1" y="1" width="898" height="218" rx="14" fill="url(#bg)" stroke="#ADFF2F" stroke-opacity="0.35" stroke-width="1.5"/>
+  <!-- Deep Space Background -->
+  <rect width="1000" height="260" fill="url(#bgGrad)" rx="16"/>
 
-  <!-- accent corner mark -->
-  <path d="M 30 40 L 30 30 L 40 30" stroke="#ADFF2F" stroke-width="2" fill="none"/>
-  <path d="M 870 180 L 870 190 L 860 190" stroke="#ADFF2F" stroke-width="2" fill="none"/>
+  <!-- 3D Perspective Grid (Creates infinite depth) -->
+  <g transform="translate(0, 130)">
+    <line x1="100" y1="0" x2="-50" y2="130" class="grid-line"/>
+    <line x1="250" y1="0" x2="150" y2="130" class="grid-line"/>
+    <line x1="400" y1="0" x2="350" y2="130" class="grid-line"/>
+    <line x1="550" y1="0" x2="550" y2="130" class="grid-line"/>
+    <line x1="700" y1="0" x2="750" y2="130" class="grid-line"/>
+    <line x1="850" y1="0" x2="950" y2="130" class="grid-line"/>
+    <line x1="1000" y1="0" x2="1150" y2="130" class="grid-line"/>
+    
+    <line x1="0" y1="20" x2="1000" y2="20" class="grid-line"/>
+    <line x1="0" y1="50" x2="1000" y2="50" class="grid-line"/>
+    <line x1="0" y1="90" x2="1000" y2="90" class="grid-line"/>
+  </g>
 
-  <!-- prompt glyph -->
-  <text x="30" y="95" font-family="'Fira Code', 'Consolas', monospace" font-size="22" fill="#6b7280">$</text>
+  <!-- Glassmorphism Terminal Container -->
+  <rect x="30" y="30" width="940" height="200" rx="12" fill="rgba(10,10,10,0.6)" stroke="#ADFF2F" stroke-opacity="0.3" stroke-width="1.5" filter="url(#glassShadow)"/>
 
-  <!-- name -->
-  <text x="55" y="98" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="46" fill="#ADFF2F" letter-spacing="1">AMAN SAMANI</text>
+  <!-- Corner Accents -->
+  <path d="M 30 50 L 30 30 L 50 30" stroke="#ADFF2F" stroke-width="2.5" fill="none" filter="url(#neonGlow)"/>
+  <path d="M 970 210 L 970 230 L 950 230" stroke="#ADFF2F" stroke-width="2.5" fill="none" filter="url(#neonGlow)"/>
 
-  <!-- tagline -->
-  <text x="30" y="138" font-family="'Fira Code', 'Consolas', monospace" font-size="17" fill="#e5e5e5">Full-Stack Engineer &#183; MERN &#183; React Native &#183; ML</text>
+  <!-- Prompt & Name -->
+  <text x="60" y="95" class="prompt">$ <tspan class="cursor">_</tspan></text>
+  <text x="105" y="92" class="title">AMAN SAMANI</text>
 
-  <!-- divider -->
-  <line x1="30" y1="158" x2="870" y2="158" stroke="#ADFF2F" stroke-opacity="0.25" stroke-width="1"/>
+  <!-- Tagline -->
+  <text x="60" y="135" class="subtitle">Full-Stack Engineer &#183; MERN &#183; React Native &#183; ML</text>
 
-  <!-- status line -->
-  <text x="30" y="184" font-family="'Fira Code', 'Consolas', monospace" font-size="14" fill="#9ca3af">Lucknow, IN  &#8226;  Final-year B.Tech CS @ BBDU, 2026  &#8226;  <tspan fill="#ADFF2F">open_to_work: true</tspan></text>
+  <!-- Divider -->
+  <line x1="60" y1="165" x2="600" y2="165" stroke="#ADFF2F" stroke-opacity="0.3" stroke-width="1"/>
+
+  <!-- Status Line -->
+  <text x="60" y="195" class="status">Lucknow, IN  &#8226;  Final-year B.Tech CS @ BBDU, 2026  &#8226;  <tspan class="status-active">open_to_work: true</tspan></text>
+
+  <!-- 3D Floating Hologram Elements -->
+  <g class="floating" transform="translate(720, 50)">
+    <g transform="scale(0.9)">
+      <polygon points="30,0 60,15 60,45 30,60 0,45 0,15" class="hologram"/>
+      <line x1="30" y1="0" x2="30" y2="60" class="hologram"/>
+      <line x1="0" y1="15" x2="60" y2="45" class="hologram"/>
+      <line x1="60" y1="15" x2="0" y2="45" class="hologram"/>
+    </g>
+  </g>
+
+  <g class="floating-reverse" transform="translate(850, 100)">
+    <g transform="scale(0.7)">
+      <polygon points="30,0 60,45 0,45" class="hologram"/>
+      <polygon points="30,0 60,45 30,60" class="hologram"/>
+      <polygon points="30,0 0,45 30,60" class="hologram"/>
+    </g>
+  </g>
+  
+  <g class="floating" transform="translate(630, 140)" style="animation-delay: 1.5s;">
+    <text x="0" y="40" font-family="'Fira Code', monospace" font-size="36" fill="#ADFF2F" filter="url(#neonGlow)" opacity="0.6">&#123;/&#125;</text>
+  </g>
+
 </svg>
